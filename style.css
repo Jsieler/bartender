@@ -1,0 +1,21 @@
+
+.displayed-drink {
+    background-color: rgb(231, 236, 217);
+    align-items: center;
+}
+
+.random {
+background-color: #d2bbe6;
+}
+.vodka {
+    background-color: rgb(216, 102, 102);
+}
+.tequila {
+    background-color: rgb(67, 166, 231);
+}
+.whiskey {
+    background-color: chartreuse;
+}
+.rum {
+    background-color: rgb(218, 155, 132);
+}
