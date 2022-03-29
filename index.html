@@ -16,32 +16,36 @@
     <div class="container displayed-drink">
         <div class="row">
             <div class="col-4"></div>
-            <div class="col-4 d-flex justify-content-center" id="display-drink-container"></div>
+            <h1 class="col-4 d-flex justify-content-center" id="display-drink-container"></h1>
             <div class="col-4"></div>
         </div>
-
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 d-flex justify-content-center" id="display-cocktail-container"></div>
+            <div class="col-2"></div>
+        </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-xl-2 col-xs-12 d-flex justify-content-center pb-3 random">
-                <p onclick="getRandomDrink(vodka)">?</p><img src="./images/icons8-cocktail-shaker-64.png"
-                    alt="Random Drink Icon" height="100" onclick="getRandomDrink(rum)" />
+                <p onclick="getRandomDrink()">?</p><img src="./images/icons8-cocktail-shaker-64.png"
+                    alt="Random Drink Icon" height="100" onclick="getRandomDrink()" />
             </div>
             <div class="col-xl-2 col-xs-12 d-flex justify-content-center pb-3 vodka">
-                <p onclick="getRandomDrink(vodka)">Vodka</p><img src="./images/icons8-vodka-64.png" alt="Vodka Icon"
-                    height="100" onclick="getRandomDrink(vodka)" />
+                <p onclick="getVodkaDrink()">Vodka</p><img src="./images/icons8-vodka-64.png" alt="Vodka Icon"
+                    height="100" onclick="getVodkaDrink()" />
             </div>
             <div class="col-xl-2 col-xs-12 d-flex justify-content-center pb-3 tequila">
-                <p onclick="getRandomDrink(tequila)">Tequila</p><img src="./images/icons8-tequila-64.png"
-                    alt="Tequila Icon" height="100" onclick="getRandomDrink(tequila)" />
+                <p onclick="getTequilaDrink()">Tequila</p><img src="./images/icons8-tequila-64.png"
+                    alt="Tequila Icon" height="100" onclick="getTequilaDrink()" />
             </div>
             <div class="col-xl-2 col-xs-12 d-flex justify-content-center pb-3 whiskey">
-                <p onclick="getRandomDrink(whiskey)">Whiskey</p><img src="./images/icons8-whiskey-64.png"
-                    alt="Whiskey Icon" height="100" onclick="getRandomDrink(whiskey)" />
+                <p onclick="getWhiskeyDrink()">Whiskey</p><img src="./images/icons8-whiskey-64.png"
+                    alt="Whiskey Icon" height="100" onclick="getWhiskeyDrink()" />
             </div>
             <div class="col-xl-2 col-xs-12 d-flex justify-content-center pb-3 rum">
-                <p onclick="getRandomDrink(rum)">Rum</p><img src="./images/icons8-rum-64.png" alt="Rum Icon"
-                    height="100" onclick="getRandomDrink(rum)" />
+                <p onclick="getRumDrink()">Rum</p><img src="./images/icons8-rum-64.png" alt="Rum Icon"
+                    height="100" onclick="getRumDrink()" />
             </div>
         </div>
     </div>
