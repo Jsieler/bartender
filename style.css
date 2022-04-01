@@ -1,38 +1,32 @@
 
 .displayed-drink {
-    background-color: rgb(231, 236, 217);
+    background-color: rgb(0, 0, 0);
     align-items: center;
 }
 
-.random {
-background-color: #4bdee9;
-}
-.vodka {
-    background-color: rgb(248, 229, 229);
-}
-.tequila {
-    background-color: rgb(182, 247, 96);
-}
-.whiskey {
-    background-color: rgb(151, 93, 17);
-}
-.rum {
-    background-color: rgb(218, 155, 132);
-}
 
 h1 {
     font-weight: bolder;
-    background-color: white;
+    background-color: white
+}
+#title{
+    font-weight: bolder;
+    background-color: rgba(245, 229, 140, 0.61);
 }
 
 h2 {
     font-style: italic;
     font-variant: small-caps;
+    color: white;
 }
 
 h3 {
     font-style: italic;
+    color: white;
 }
 #display-image-container img {
     height: 500px;
+}
+body {
+    background-color: rgba(168, 144, 5, 0.61);
 }
