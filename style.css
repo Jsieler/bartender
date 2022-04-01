@@ -11,7 +11,7 @@ h1 {
 }
 #title{
     font-weight: bolder;
-    background-color: rgba(245, 229, 140, 0.61);
+    background-color: rgba(114, 175, 216, 0.911);
 }
 
 h2 {
@@ -28,5 +28,5 @@ h3 {
     height: 500px;
 }
 body {
-    background-color: rgba(168, 144, 5, 0.61);
+    background-color: rgba(114, 175, 216, 0.911);
 }
