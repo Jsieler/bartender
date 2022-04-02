@@ -25,7 +25,8 @@ h3 {
     color: white;
 }
 #display-image-container img {
-    height: 500px;
+    height: 450px;
+    width: 300px;
 }
 body {
     background-color: rgba(114, 175, 216, 0.911);
