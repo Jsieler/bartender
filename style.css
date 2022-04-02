@@ -30,3 +30,15 @@ h3 {
 body {
     background-color: rgba(114, 175, 216, 0.911);
 }
+
+.click-drink {
+    font-style: italic;
+    font-weight: bold;
+}
+
+#ingredients {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
