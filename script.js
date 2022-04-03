@@ -14,14 +14,41 @@ let ratingEl = document.getElementById('display-rating-container')
 let modal = document.getElementById("myModal");
 let btn = document.getElementById("myBtn");
 let span = document.getElementsByClassName("close")[0];
+let rateFormEl = document.getElementById('rate-form')
 
-const bloodyMary = [2, 2, 2, 2, 5, 6]
+const bloodyMary = [5,5,3,1]
 const screwDriver = [2, 3, 4, 1, 1]
 const cosmopolitan = [3, 1, 5, 5, 4]
 const espressoMartini = [4, 5, 3, 4, 3]
 const moscowMule = [1, 4, 1, 1]
 const whiteRussian = [5, 5, 5, 1]
 const vodkaRatings = [bloodyMary, screwDriver, cosmopolitan, espressoMartini, moscowMule, whiteRussian]
+
+const margarita = [1,1]
+const paloma = [4,5,4]
+const tequilaSunrise = [5,5,5]
+const afterHoursBloodyMaria = [2,2,1]
+const ranchWater = [4,3,5]
+const tequilaRatings = [margarita, paloma, tequilaSunrise, afterHoursBloodyMaria, ranchWater]
+
+const sazerac = [4,5]
+const whiskeySour = [5,5,5]
+const manhattan = [3,3,3,4]
+const oldFashioned = [4,4,4]
+const bourbonPeachPunch = [4,4,3,3,2]
+const whiskeyRatings = [sazerac, whiskeySour, manhattan, oldFashioned, bourbonPeachPunch]
+
+const daiquiri = [4,5,3,3]
+const maiTai = [5,3,3,2]
+const pinaColada = [2,3,4]
+const darkNStormy = [4,2,2]
+const jungleBird = [3,4,5]
+const coquito = [4,3,1]
+const painKiller = [4,4,1,1]
+const mojito = [5,5,5,5]
+const rumRatings = [daiquiri, maiTai, pinaColada, darkNStormy, jungleBird, coquito, painKiller, mojito]
+
+const LiqourDrinkRating = [vodkaRatings, tequilaRatings, whiskeyRatings, rumRatings]
 
 
 function displayRatingStar(stars) {
@@ -180,7 +207,8 @@ function getRandomDrink() {
     displayImageEl.innerHTML = ""
     displayImageEl.append(image)
     showIngredients()
-}
+    getRating(LiqourDrinkRating[`${randomLiqour}`][`${randomDrink}`])
+ }
 
 function getVodkaDrink() {
     randomDrink = Math.floor(Math.random() * liqourDrinks[0].cocktails.length)
@@ -197,6 +225,7 @@ function getVodkaDrink() {
     getRating(vodkaRatings[`${randomDrink}`])
 }
 
+
 function getTequilaDrink() {
     randomDrink = Math.floor(Math.random() * liqourDrinks[1].cocktails.length)
     displayDrinkEl.textContent = 'Tequila'
@@ -209,6 +238,7 @@ function getTequilaDrink() {
     displayImageEl.innerHTML = ""
     displayImageEl.append(image)
     showIngredients()
+    getRating(tequilaRatings[`${randomDrink}`])
 }
 
 function getWhiskeyDrink() {
@@ -223,6 +253,7 @@ function getWhiskeyDrink() {
     displayImageEl.innerHTML = ""
     displayImageEl.append(image)
     showIngredients()
+    getRating(whiskeyRatings[`${randomDrink}`])
 }
 
 function getRumDrink() {
@@ -237,6 +268,7 @@ function getRumDrink() {
     displayImageEl.innerHTML = ""
     displayImageEl.append(image)
     showIngredients()
+    getRating(rumRatings[`${randomDrink}`])
 }
 
 
@@ -256,3 +288,6 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+
