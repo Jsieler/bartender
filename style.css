@@ -38,3 +38,11 @@ body {
     font-weight: bold;
 }
 
+#click-to-rate {
+    color: black;
+    font-size: smaller;
+}
+
+#display-rating-container {
+    color: black;
+}

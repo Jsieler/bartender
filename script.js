@@ -7,6 +7,69 @@ let displayCocktailEl = document.getElementById('display-cocktail-container')
 let displayDescriptionEl = document.getElementById('display-description-container')
 let displayImageEl = document.getElementById('display-image-container')
 let displayIngredientsListEl = document.getElementById('ingredients-list')
+let displayRatingEl = document.getElementById('display-rating-container')
+let displayStarEl = document.getElementById('display-star-container')
+let clickToRateEl = document.getElementById('click-to-rate')
+let ratingEl = document.getElementById('display-rating-container')
+
+const bloodyMary = [2, 2, 2, 2, 5, 6]
+const screwDriver = [2, 3, 4, 1, 1]
+const cosmopolitan = [3, 1, 5, 5, 4]
+const espressoMartini = [4, 5, 3, 4, 3]
+const moscowMule = [1, 4, 1, 1]
+const whiteRussian = [5, 5, 5, 1]
+const vodkaRatings = [bloodyMary, screwDriver, cosmopolitan, espressoMartini, moscowMule, whiteRussian]
+
+
+function displayRatingStar(stars) {
+    for (i = 0; i < stars; i++) {
+        let ratingStars = document.createElement("img");
+        ratingStars.setAttribute("src", "./images/star.png");
+        displayStarEl.appendChild(ratingStars);
+    }
+}
+
+function getRating(drink) {
+    let ratings = 0
+    for (let i = 0; i < drink.length; i++) {
+        ratings += drink[i]
+        averageRating = ratings / drink.length
+        displayRatingEl.textContent = `Rating ${Math.round(`${averageRating}`)}/5`
+    }
+    let score = Math.round(`${averageRating}`)
+  
+    if (score == 1) {
+        console.log('Score is 1')
+        displayStarEl.innerHTML = ""
+        displayRatingStar(`${score}`)
+        console.log(displayRatingStar)
+    } else if (score == 2) {
+        console.log('Score is 2')
+        displayStarEl.innerHTML = ""
+        displayRatingStar(`${score}`)
+    } else if (score == 3) {
+        console.log('Score is 3')
+        displayStarEl.innerHTML = ""
+        displayRatingStar(`${score}`)
+    } else if (score == 4) {
+        console.log('Score is 4')
+        displayStarEl.innerHTML = ""
+        displayRatingStar(`${score}`)
+    } else if (score == 5) {
+        console.log('Score is 5')
+        displayStarEl.innerHTML = ""
+        displayRatingStar(`${score}`)
+    } else {
+        displayStarEl.innerHTML = ""
+        console.log('There is no Rating')
+    }
+}
+
+
+function clickToRate() {
+    
+}
+
 
 // Liqour Types and Cocktails 
 const vodka = {
@@ -15,7 +78,7 @@ const vodka = {
     description: [
         'Combine all ingredients in a Collins or highball glass. Add ice. Stir well. Garnish with lemon, celery, olives, and enjoy.ombine vodka, tomato juice, lemon juice, Worcestershire sauce, pepper, and celery salt in a Highball glass. Top with your garnish of choice',
         'Made by combining vodka and orange juice in a Highball glass with ice',
-        'Combine all ingredients in shaker tinAdd ice. Shake vigorously, until tin is frosted over.Strain into chilled cocktail glass Garnish with lime twist and enjoy.',
+        'Combine all ingredients in shaker tin Add ice. Shake vigorously, until tin is frosted over.Strain into chilled cocktail glass Garnish with lime twist and enjoy.',
         'Combine all ingredients in a mixing tin and shake vigorously with ice. Strain into a coupette glass. Garnish with three coffee beans.',
         'Add vodka, ginger beer, and lime juice to a copper mug (or highball glass). Fill mug with crushed ice. Stir well. Garnish with lime wedge and enjoy.',
         'Combine all ingredients in mixing glass with ice. Stir Strain into chilled rocks glass over fresh ice'],
@@ -94,6 +157,8 @@ const liqourDrinks = [vodka, tequila, whiskey, rum]
 
 function showIngredients() {
     displayIngredientsListEl.style.color = 'white'
+    clickToRateEl.style.color = 'rgb(82, 252, 243)'
+    ratingEl.style.color = 'white'
 }
 
 // Functions to get Random Drinks onClick  
@@ -126,6 +191,7 @@ function getVodkaDrink() {
     displayImageEl.innerHTML = ""
     displayImageEl.append(image)
     showIngredients()
+    getRating(vodkaRatings[`${randomDrink}`])
 }
 
 function getTequilaDrink() {
